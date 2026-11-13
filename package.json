@@ -1,0 +1,17 @@
+{
+  "name": "keycloak-nostr-auth",
+  "private": true,
+  "version": "0.2.1",
+  "license": "MIT",
+  "scripts": {
+    "build": "esbuild src/main/js/kc-nostr-auth.js --bundle --format=esm --target=es2022 --legal-comments=linked --outfile=target/generated-resources/theme-resources/resources/js/kc-nostr-auth.js",
+    "postbuild": "node src/main/js/package-licenses.mjs",
+    "test": "node --test src/test/js/*.test.mjs"
+  },
+  "dependencies": {
+    "nostr-tools": "2.26.0"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.12"
+  }
+}
